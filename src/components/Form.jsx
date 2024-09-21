@@ -10,11 +10,11 @@ const Form = () => {
   } = useForm();
 
 
-  const [ show ,  setShow ] = useState([])
+//   const [ show ,  setShow ] = useState([])
   const getData = (data) => {
     console.log(data);
-    show.push(data)
-    setShow([...show])
+    // show.push(data)
+    // setShow([...show])
   };
 
   const selectedOption = watch("laptop");
@@ -113,35 +113,7 @@ const Form = () => {
             )}
           </div>
 
-          {/* <div>
-            <label className="form-control w-full max-w-xl">
-              <div className="label label-text">Gender</div>
-              <select className="select select-bordered">
-                <option disabled selected>
-                  Pick one
-                </option>
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-            </label>
-          </div>
-
-          <div>
-            <label className="form-control w-full max-w-xl">
-              <div className="label label-text">Do you have a Laptop?</div>
-              <select
-                className="select select-bordered"
-                {...register("laptop")}
-              >
-                <option disabled selected>
-                  Select an Option
-                </option>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </label>
-          </div> */}
-
+         
           <div>
             <label className="form-control w-full max-w-xl">
               <div className="label label-text">Gender Selection</div>
@@ -162,7 +134,7 @@ const Form = () => {
             <label className="form-control w-full max-w-xl">
               <div className="label label-text">Do you have a Laptop?</div>
               <select
-                {...register("gender")}
+                {...register("laptop")}
                 className="select select-bordered"
               >
                 <option disabled selected value="other">
@@ -189,11 +161,11 @@ const Form = () => {
             )}
           </div>
 
-          <div className="col-start-1 col-end-3">
+         <div className="col-start-1 col-end-3">
             <label className="form-control w-full max-w-[100%]">
               <div className="label label-text">Last Qualification</div>
               <select
-                {...register("gender")}
+                {...register("qualification")}
                 className="select select-bordered"
               >
                 <option disabled selected value="other">
@@ -205,17 +177,7 @@ const Form = () => {
                 <option value="masters">Masters</option>
               </select>
             </label>
-          </div>
-
-          {/* <div className="col-start-1 col-end-3">
-            <label className="form-control w-full max-w-[1172px]">
-              <div className="label label-text">Do you have a Laptop?</div>
-            <select {...register("laptop")} className="select select-bordered">
-              <option disabled selected value="other">Select an Option</option>
-              
-            </select>
-            </label>
-          </div> */}
+          </div> 
 
           <div className="col-start-1 col-end-3">
             <label className="form-control">
@@ -247,9 +209,8 @@ const Form = () => {
           </button>
           {/* <br /> */}
         </div>
-        <p>Selected Option: {selectedOption}</p>
       </form>
-      {show ? (
+      {/* {show ? (
         show.map((item, index) => {
           return (
             <div key={index}>
@@ -261,7 +222,7 @@ const Form = () => {
         })
       ) : (
         <h1>Loading</h1>
-      )}
+      )} */}
     </>
   );
 };
